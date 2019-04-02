@@ -59,9 +59,36 @@ def merge_data(keys, data)
   merged_array = []
   keys.each do |key_element|
     data.each do |data_element|
-      binding.pry
-
+      if data_element[key_element[:first_name]]
+          merged_person = data_element[key_element[:first_name]]
+          merged_person[:first_name] = key_element[:first_name]
+          merged_array << merged_person
+      end
     end
   end
   merged_array
+end
+
+def find_cool(hashes)
+  bingo_arry = []
+  hashes.each do |hash|
+    hash.each do |k,v|
+      if v == "cool"
+        bingo_arry << hash
+      end
+    end
+  end
+  bingo_arry
+end
+
+def organize_schools(schools)
+  new_hash = {}
+  schools.each do |key, hash|
+    hash.each do |k,v|
+        new_hash[v] = []
+        new_hash[v] << key
+        binding.pry
+    end
+  end
+  new_hash
 end
