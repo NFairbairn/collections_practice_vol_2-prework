@@ -56,6 +56,12 @@ def count_elements(array)
 end
 
 def merge_data(keys, data)
-  keys.push(data).flatten!
-  #keys = data.merge(keys)
+  merged_array = []
+  keys.each do |key_element|
+    data.each do |data_element|
+      binding.pry
+
+    end
+  end
+  merged_array
 end
