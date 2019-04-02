@@ -85,8 +85,8 @@ def organize_schools(schools)
   new_hash = {}
   schools.each do |key, hash|
     hash.each do |k,v|
-        #new_hash[v] = []
-        #new_hash[v] << key
+        new_hash[v] = []
+        new_hash[v] << key
         binding.pry
     end
   end
