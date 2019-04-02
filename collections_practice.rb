@@ -86,7 +86,6 @@ def organize_schools(schools)
   schools.each do |key, hash|
     hash.each do |k,v|
         new_hash[v] = [key]
-        new_hash[v] << key
         binding.pry
     end
   end
